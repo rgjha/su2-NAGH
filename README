@@ -1,0 +1,20 @@
+This code was used to produce the Monte Carlo results for the paper 
+https://arxiv.org/abs/1901.11443 
+
+If this is helpful in your work, we request that you cite the 
+aforementioned paper. 
+
+@article{Bazavov:2019qih,
+      author         = "Bazavov, Alexei and Catterall, Simon and Jha, Raghav G.
+                        and Unmuth-Yockey, Judah",
+      title          = "{Tensor renormalization group study of the non-Abelian
+                        Higgs model in two dimensions}",
+      year           = "2019",
+      eprint         = "1901.11443",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-lat",
+      SLACcitation   = "%%CITATION = ARXIV:1901.11443;%%"
+}
+
+For the tensor version of this model, please see 
+https://github.com/rgjha/TensorCodes
