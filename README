@@ -9,7 +9,12 @@ aforementioned paper.
                         and Unmuth-Yockey, Judah",
       title          = "{Tensor renormalization group study of the non-Abelian
                         Higgs model in two dimensions}",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
       year           = "2019",
+      number         = "11",
+      pages          = "114507",
+      doi            = "10.1103/PhysRevD.99.114507",
       eprint         = "1901.11443",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-lat",
