@@ -2,7 +2,6 @@
 
 const int POS1 = (NCOLOR*(NCOLOR-1)/2);
 const int POS2 = (NCOLOR*(NCOLOR-1));
-
 const double ROOT2 = 1.41421356237309504880168872421;
 
 int posmat[NCOLOR][NCOLOR] ;
@@ -27,7 +26,7 @@ int my_gen(void)
 
   computegen() ;
 
-  /* map to data structures in code */
+  /* Map to data structures in code */
   
   for(aa=0;aa<NUMGEN;aa++) {
 

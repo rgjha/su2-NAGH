@@ -1,7 +1,6 @@
 #include "update_gauge_field.h"
 
-void update_gauge_field(Gauge_Field &U, const Gauge_Field &p_U,
-			double dt){
+void update_gauge_field(Gauge_Field &U, const Gauge_Field &p_U,double dt){
 Lattice_Vector x;
 int site=0;
 

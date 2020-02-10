@@ -1,7 +1,6 @@
 #include "update_gauge_momenta.h"
 
-void update_gauge_momenta(Gauge_Field &p_U, const Gauge_Field &f_U,
-			  double dt){
+void update_gauge_momenta(Gauge_Field &p_U, const Gauge_Field &f_U,double dt){
 Lattice_Vector x;
 int site=0;
 

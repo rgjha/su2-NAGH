@@ -8,6 +8,8 @@ double Complex::imag(void) const{return(im);}
 double Complex::norm(void){return(sqrt(re*re+im*im));}
 void Complex::print(void) const {cout << "("<< re << ", " << im << ")";}
 
+
+
 ostream& operator<<(ostream& out,Complex c){
 	out<<c.real()<<"\t"<<c.imag();
 	return out;}
@@ -250,11 +252,21 @@ int loop_over_lattice(Lattice_Vector &x, int &site){
 int test,i,current;
 static int Lattice_Map[D];
 static int first_time=1;
+static int ixav[];
+static int ixbv[];
+    
 
 if(first_time){
 for(i=0;i<D;i++)
 Lattice_Map[i]=(int)pow((double)L,(double)i);
 first_time=0;
+}
+    
+if(first_time){
+for(i=0;i<Nxa;i++)
+        ixav[i] = i
+for(j=0;j<Nxb;i++)
+    ixbv[j] = Nxa + j
 }
 
 
@@ -264,7 +276,7 @@ x.set(i,current/Lattice_Map[i]);
 current=current-Lattice_Map[i]*x.get(i);
 }
 
-if(current!=0){cout << "error in loop_over_lattice" << "\n";}
+if(current!=0){cout << "Error in loop_over_lattice" << "\n";}
 
 if(site==SITES)
 test=1;
@@ -295,14 +307,14 @@ for(int j=0;j<D;j++){
 link[i][j]=gaussU();}}
 }
 
-// warm start etc	 
+// Warm start etc.
 if(hot==2){
 for(int i=0;i<SITES;i++){
 for(int j=0;j<D;j++){
 link[i][j]=egaussU();}}
 }
 
-// unit matrix
+// Unit matrix
 if(hot==0){
 for(int i=0;i<SITES;i++)
 for(int j=0;j<D;j++){

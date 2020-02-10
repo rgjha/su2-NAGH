@@ -45,8 +45,6 @@ while(loop_over_lattice(y,site2)){
 if((x.get(D-1)-y.get(D-1))==0){
 
 t=(x.get(mu)-y.get(mu)+L)%L;
-//corr[t]=corr[t]+(1.0/((D-1)*NCOLOR*NCOLOR))*Tr(Adj(prod.get(x,D-1)))*Tr(prod.get(y,D-1));  Line 48=Line 49 within errors as expected
-//corr[t]=corr[t]+(1.0/((D-1)*NCOLOR*NCOLOR))*Tr(prod.get(y,D-1))*Tr(Adj(prod.get(x,D-1)));
 corr[t]=corr[t]+(1.0/((D-1)*NCOLOR*NCOLOR))*Tr(prod.get(x,D-1))*Tr(Adj(prod.get(y,D-1)));
 }
 

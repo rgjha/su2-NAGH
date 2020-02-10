@@ -10,28 +10,25 @@ void measure(Gauge_Field &U){
 
     if(first_time){
 
-  	
     f_gauge.open("gauge");
     if(f_gauge.bad()){ 
-    cout << "failed to open gauge file\n" << flush ;}
+    cout << "Failed to open gauge file\n" << flush ;}
     f_matter.open("matter");
     if(f_matter.bad()){
-    cout << "failed to open matter file\n"<< flush;}
+    cout << "Failed to open matter file\n"<< flush;}
     
     first_time=0;
 	}	
 
-	cout << "in measure\n" << flush;
-	
+	cout << "In measure \n" << flush;
 	
 	obs(U, act_g, act_s);
 	loop(U);
 	line(U);
-        corrlines(U);
+    corrlines(U);
 	     
 	f_gauge << act_g << "\n" << flush;
-        f_matter << act_s << "\n" << flush;
-	
+    f_matter << act_s << "\n" << flush;
 	
 	return;
 }

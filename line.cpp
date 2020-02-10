@@ -1,6 +1,6 @@
 #include "line.h"
 
-// computes Polyakov lines
+// Computes Polyakov lines
 
 void line(const Gauge_Field  &U){
 int site=0,t,i,j;
@@ -9,8 +9,6 @@ Umatrix prod;
 static int first_time=1,count=0;
 static ofstream f_line1;
 Complex p;
-
-//cout << "in line\n" << flush;
 
 count++;
 

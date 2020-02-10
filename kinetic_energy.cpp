@@ -5,7 +5,8 @@ Complex dum=Complex();
 int sites,mu,b;
 Lattice_Vector x;
 
-// note minus sign to take into account AH Lambdas
+// Note minus sign to take into account
+// anti-hermitian (AH) generators (Lambdas)
  
  
  sites=0;
@@ -14,8 +15,7 @@ Lattice_Vector x;
  dum=dum-0.5*Tr(p_U.get(x,mu)*p_U.get(x,mu));
  }}
  
- 
-  
+
 if(fabs(dum.imag())>0.0000000001){cout << "k.e not real!" << dum.imag()<<"\n" << flush;}
  
    

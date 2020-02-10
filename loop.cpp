@@ -1,5 +1,5 @@
 #include "loop.h"
-// computes wilson loops
+// Computes wilson loops
 
 void loop(const Gauge_Field  &U){
 
@@ -10,9 +10,7 @@ static int first_time=1,count=0;
 static ofstream f_loop;
 double wilson[L][L];
 
- Gauge_Field Udag,Wdag;
-//cout << "in loop\n" << flush;
-
+Gauge_Field Udag,Wdag;
 Udag=Adj(U);
 
 count++;
@@ -20,7 +18,7 @@ count++;
 if(first_time){
 f_loop.open("loops");
 if(f_loop.bad()){
-cerr << "failed to open loops file" << "\n";exit(1);}
+cerr << "Failed to open loops file" << "\n";exit(1);}
 
 first_time=0;
 }
@@ -30,7 +28,6 @@ for(M=1;M<=L/2;M++){
 
 wilson[R][M]=0.0;
 
-//cout << "working on R,M " << R << "\t" << M << "\n" << flush;
 site=0;
 while(loop_over_lattice(x,site)){
 
@@ -67,8 +64,6 @@ wilson[R][M]=wilson[R][M]+(1.0/NCOLOR)*Tr(prod).real();
 
 }
 }
-
-//cout << "wilson loop is " << wilson[R][M] << "\n" << flush;
 }
 
 for(R=1;R<=(L/2);R++){

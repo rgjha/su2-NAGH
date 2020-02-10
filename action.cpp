@@ -1,16 +1,11 @@
 #include "action.h"
 
-
 double action(const Gauge_Field &U){
-
 Lattice_Vector x,e_mu,e_nu,xx=Lattice_Vector();
 double act_g=0.0,act_s=0.0;
 int mu,nu,site;
 Gauge_Field Udag;
-Umatrix s1,w1;
-
-
-
+Umatrix s1;
 Udag=Adj(U);
 
 // Wilson gauge action
@@ -30,7 +25,6 @@ e_nu=Lattice_Vector(nu);
 }
 
 site=0;
-w1=0.0;
 
 while(loop_over_lattice(x,site)){
 for(mu=0;mu<D;mu++){
@@ -39,3 +33,13 @@ for(mu=0;mu<D;mu++){
 
 return(act_g+act_s);
 }
+
+
+double cal_action(Sla, const Gauge_Field &U){
+
+    
+return 
+}
+
+
+

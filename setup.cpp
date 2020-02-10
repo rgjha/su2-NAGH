@@ -10,15 +10,14 @@ cout << "Computing generators for SU(NCOLOR)\n" << flush;
 (void)my_gen();
 
 Complex trace;
-// test tracelessness
+// Test tracelessness
 for(i=0;i<NUMGEN;i++){
 trace=Tr(Lambda[i]);
 if(trace.norm()>0.000001){
 cout << "TrT_"<<i<<"is " << trace << "\n";}
 }
 
-// test orthogonality
-
+// Test orthogonality
 for(i=0;i<NUMGEN;i++){
 for(j=0;j<NUMGEN;j++){
 trace=Tr(Lambda[i]*Lambda[j]);

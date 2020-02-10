@@ -7,12 +7,10 @@ int sites,mu,nu;
  Umatrix staple,staple3;
  Gauge_Field Udag,utmp,Wdag,wtmp;
 
-//cout << "in force" << endl;
-
 Udag=Adj(U);
 f_U=Gauge_Field();
 
-// gauge force - Wilson contribution
+// Gauge force - Wilson term contribution
 
 sites=0;
 while(loop_over_lattice(x,sites)){
@@ -31,9 +29,6 @@ staple=staple+U.get(x+e_mu,nu)*Udag.get(x+e_nu,mu)*Udag.get(x,nu)+
 
 staple=U.get(x,mu)*staple-Adj(U.get(x,mu)*staple);
 staple=staple-(1.0/NCOLOR)*Tr(staple)*Umatrix(1);
-
-//cout << "trace is " << Tr(staple) << "\n" << flush;
-
 f_U.set(x,mu,-(BETA/(2*NCOLOR))*staple);
 }
 }

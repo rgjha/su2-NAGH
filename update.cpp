@@ -16,7 +16,7 @@ static ofstream f_hmc;
 if(first_time){
 f_hmc.open("hmc_test");
 if(f_hmc.bad()){
-cout << "failed to open hmc_test file\n" << flush;}
+cout << "Failed to open hmc_test file\n" << flush;}
 
 
 S_old=action(U);
@@ -27,7 +27,7 @@ cout << "Trajectory length " << TRAJECTORY_LENGTH << "\n" ;
 
 
 if((no_calls%50==0)&&(!first_time)){
-cout << "acceptance rate " << (double)accept/(double)no_calls << "\n" <<
+cout << "Acceptance rate " << (double)accept/(double)no_calls << "\n" <<
 flush;
 no_calls=0;
 accept=0;
@@ -77,9 +77,8 @@ f_hmc << hmc_test << "\n" << flush;
 		return;
 	}
 	else{
-    //cout << "hmc_test " << hmc_test << " failed\n" << flush;
     cout << "REJECT " << endl;
-	// if fails copy back fields
+	// If fails then copy back the fields
 	U=old_U;
 	f_U=old_f_U;
 	

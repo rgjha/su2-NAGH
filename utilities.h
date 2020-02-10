@@ -12,23 +12,21 @@ using namespace std;
 #include <ctime>
 #include <time.h>
 
-const int L = 4;
-const int T = 1;
+const int L = 10;
+const int T = 10;
+const int Nxa = 4;
+const int Nxb = L - Nxa;
 const int D = 2 ;
-
 const int SITES = (L*T);
-
 const int NCOLOR = 2;
 const int NUMGEN = (NCOLOR*NCOLOR-1); 
 
-// used for unitarity checks
+
+// Used for unitarity checks
 const double GAUGETOL = 0.00000000000001;
-
 const double PBC = 1.0;
-
 const double SMALL = 0.00000000000001;
 const int DEBUG_TIME = 1;
-
 extern double BETA,KAPPA,C,DT,TIME;
 extern int SWEEPS,GAP,START,THERM,READIN,SEED,TRAJECTORY_LENGTH;
 
