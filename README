@@ -23,3 +23,7 @@ aforementioned paper.
 
 For the tensor version of this model, please see 
 https://github.com/rgjha/TensorCodes
+
+For an alternate Python version, see PGM_MC_2d.py
+
+To compile - g++ -o exec *.cpp
